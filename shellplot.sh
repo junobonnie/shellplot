@@ -77,7 +77,7 @@ done
 
 #draw x-axis
 if [ $mode == 'log' ]; then
-        printf "log"
+        printf "\033[92mlog\033[0m"
 else
         printf "   "
 fi
