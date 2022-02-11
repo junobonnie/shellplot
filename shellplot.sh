@@ -2,7 +2,7 @@
 
 # log function
 log() {
-        input=$1
+        input=$1**3
         log_result=0
         while :
         do
@@ -16,15 +16,18 @@ log() {
 # log function
 
 # develop info
-echo "                                                                                                          "
-echo "          S H E L L P L O T                                                               "
-echo "          Version 1.1    last modified 2022-02-09                 "
-echo "                                                                                                          "
-echo "          Copyright (C) 2022~                                                             "
-echo "          Developed by Replica                                                    "
-echo "                                                                                                          "
-echo "          My Github Page:     http://github.com/junobonnie"
-echo "                                                                                                          "
+if [ ${3:-'norm'} != 'mute' ]; then
+        echo "                                                                                                          "
+        echo "          S H E L L P L O T                                                               "
+        echo "          Version 1.1    last modified 2022-02-09                 "
+        echo "                                                                                                          "
+        echo "          Copyright (C) 2022~                                                             "
+        echo "          Developed by Replica                                                    "
+        echo "                                                                                                          "
+        echo "          My Github Page:     http://github.com/junobonnie"
+        echo "                                                                                                          "
+fi
+# develop info
 
 #get value list
 list=${1//,/}
@@ -32,10 +35,12 @@ list=${1//,/}
 #set y-axis mode (norm or log)
 mode=${2:-'norm'}
 
-#find max value
+#find max value and total
 MAX=0
+total=0
 for value in $list
 do
+        total=$(($total+$value))
         if [ $MAX -ge $value ]; then
                 MAX=$MAX
         else
@@ -43,11 +48,13 @@ do
         fi
 done
 
+printf "\n      \033[33m[ Total : $total ] [ Maximum Value : $MAX ]\033[0m\n"
+
 if [ $mode == 'log' ]; then
         log $MAX
         MAX=$log_result
 fi
-#find max value
+#find max value and total
 
 #draw graph
 for height in {50..0}
