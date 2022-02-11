@@ -7,7 +7,8 @@ $ source ~/shellplot.sh '125, 206, 279, 304, 302, 355, 351, 355, 367, 323, 368, 
 <br>
 <br>
 
-![image](https://user-images.githubusercontent.com/60418809/153174084-d08f5ee0-988a-4476-9468-91800017efcf.png)
+![image](https://user-images.githubusercontent.com/60418809/153585934-c48080d4-5d7c-4785-ae02-5a92340fd9e0.png)
+
 
  
 <br>
@@ -17,4 +18,4 @@ $ source ~/shellplot.sh '125, 206, 279, 304, 302, 355, 351, 355, 367, 323, 368, 
 <br>
 <br>
 
-![image](https://user-images.githubusercontent.com/60418809/153174430-bae7aade-9213-4a66-85e2-86ece7a0eae1.png)
+![image](https://user-images.githubusercontent.com/60418809/153586045-c8343892-57d0-43c9-9a55-37e73e20ccd9.png)
